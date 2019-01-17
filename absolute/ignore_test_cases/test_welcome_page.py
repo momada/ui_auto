@@ -1,0 +1,34 @@
+import allure
+import pytest
+
+from absolute.actions.general_actions import GeneralActions
+from absolute.actions.login_actions import LoginActions
+from absolute.elements.main_page_elements import MainPageElements
+from absolute.elements.users_page_elements import UsersPageElements
+from absolute.elements.welcome_page_elements import WelcomePageElements
+
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check Welcome page features')
+@allure.story('Check general elements')
+def test_page_elements(fixture_webdriver):
+    general_action = GeneralActions(fixture_webdriver)
+    mp_element = MainPageElements(fixture_webdriver)
+    welcome_elements = WelcomePageElements(fixture_webdriver)
+    LoginActions(fixture_webdriver).login_full_case(UsersPageElements(fixture_webdriver).admin_email())
+
+    # check elements
+    general_action.check_element_on_page(mp_element.logo())
+    general_action.check_element_on_page(mp_element.hamburger_menu_button())
+
+    general_action.check_element_on_page(welcome_elements.logout_button())
+    general_action.check_element_on_page(welcome_elements.welcome_time())
+    general_action.check_element_on_page(welcome_elements.content_block())
+    general_action.check_element_on_page(welcome_elements.dashboard_button())
+    general_action.check_element_on_page(welcome_elements.partner_button())
+
+    # # check footer elements
+    # general_action.check_element_on_page(mp_element.footer_whyus())
+    # general_action.check_element_on_page(mp_element.footer_company())
+    # general_action.check_element_on_page(mp_element.footer_career())
+    # general_action.check_element_on_page(mp_element.footer_faq())
+    # general_action.check_element_on_page(mp_element.footer_contact())
