@@ -2,8 +2,6 @@ import time
 
 from absolute.actions.general_actions import GeneralActions
 from absolute.elements.login_page_elements import LoginPageElements
-from absolute.elements.main_page_elements import MainPageElements
-from absolute.elements.welcome_page_elements import WelcomePageElements
 from absolute.config import Param
 
 
@@ -12,7 +10,6 @@ class LoginActions:
         self.driver = driver
 
     def login(self, email, password):
-        # main_elements = MainPageElements(self.driver)
         login_elements = LoginPageElements(self.driver)
         general_action = GeneralActions(self.driver)
         general_action.open_page_by_url(Param.url())
@@ -24,4 +21,8 @@ class LoginActions:
         time.sleep(3)
 
     def logout(self):
-        GeneralActions(self.driver).click_on_button(WelcomePageElements(self.driver).logout_button())
+        assert (self.driver.title, 'Absolute')
+        GeneralActions(self.driver).click_on_button(LoginPageElements(self.driver).user_profile())
+        GeneralActions(self.driver).click_on_button(LoginPageElements(self.driver).logout_button())
+        assert (self.driver.title, 'Absolute')
+

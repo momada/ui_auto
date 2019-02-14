@@ -1,8 +1,6 @@
 import pytest
 from selenium import webdriver
 
-from absolute.elements.main_page_elements import MainPageElements
-
 
 @pytest.fixture
 def fixture_webdriver() -> webdriver:
