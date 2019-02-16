@@ -2,9 +2,8 @@ import time
 
 from faker import Faker
 
-from absolute.elements.edit_user_page_elements import EditUsersPageElements
-from absolute.elements.users_page_elements import UsersPageElements
-from selenium import webdriver
+from absolute.elements_bak.edit_user_page_elements import EditUsersPageElements
+from absolute.elements_bak.users_page_elements import UsersPageElements
 from selenium.webdriver.support.select import Select as WebDriverSelect
 
 

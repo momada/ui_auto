@@ -3,9 +3,8 @@ from faker import Faker
 
 from absolute.actions.general_actions import GeneralActions
 from absolute.actions.login_actions import LoginActions
-from absolute.elements.edit_user_page_elements import EditUsersPageElements
-from absolute.elements.users_page_elements import UsersPageElements
-from absolute.elements.welcome_page_elements import WelcomePageElements
+from absolute.elements_bak.users_page_elements import UsersPageElements
+from absolute.elements_bak.welcome_page_elements import WelcomePageElements
 
 
 class UsersPageActions:

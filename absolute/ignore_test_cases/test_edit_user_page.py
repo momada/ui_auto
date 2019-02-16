@@ -2,12 +2,11 @@ import time
 
 import allure
 import pytest
-from faker import Faker
 from absolute.actions.edit_users_page_actions import EditUsersPageActions
 from absolute.actions.general_actions import GeneralActions
 from absolute.actions.users_page_actions import UsersPageActions
-from absolute.elements.edit_user_page_elements import EditUsersPageElements
-from absolute.elements.users_page_elements import UsersPageElements
+from absolute.elements_bak.edit_user_page_elements import EditUsersPageElements
+from absolute.elements_bak.users_page_elements import UsersPageElements
 
 
 @pytest.allure.severity(pytest.allure.severity_level.MINOR)

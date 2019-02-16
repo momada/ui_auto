@@ -1,4 +1,4 @@
-from absolute.elements.main_page_elements import MainPageElements
+from absolute.elements_bak.main_page_elements import MainPageElements
 
 
 class BasePage(object):

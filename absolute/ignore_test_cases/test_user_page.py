@@ -6,8 +6,8 @@ from faker import Faker
 
 from absolute.actions.general_actions import GeneralActions
 from absolute.actions.users_page_actions import UsersPageActions
-from absolute.elements.main_page_elements import MainPageElements
-from absolute.elements.users_page_elements import UsersPageElements
+from absolute.elements_bak.main_page_elements import MainPageElements
+from absolute.elements_bak.users_page_elements import UsersPageElements
 
 
 @pytest.allure.severity(pytest.allure.severity_level.MINOR)

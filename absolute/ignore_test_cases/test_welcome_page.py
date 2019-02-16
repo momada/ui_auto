@@ -3,9 +3,9 @@ import pytest
 
 from absolute.actions.general_actions import GeneralActions
 from absolute.actions.login_actions import LoginActions
-from absolute.elements.main_page_elements import MainPageElements
-from absolute.elements.users_page_elements import UsersPageElements
-from absolute.elements.welcome_page_elements import WelcomePageElements
+from absolute.elements_bak.main_page_elements import MainPageElements
+from absolute.elements_bak.users_page_elements import UsersPageElements
+from absolute.elements_bak.welcome_page_elements import WelcomePageElements
 
 @pytest.allure.severity(pytest.allure.severity_level.NORMAL)
 @allure.feature('Check Welcome page features')

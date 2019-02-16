@@ -4,8 +4,8 @@ import allure
 import pytest
 
 from absolute.actions.general_actions import GeneralActions
-from absolute.elements.main_page_elements import MainPageElements
-from absolute.elements.setup_page_elements import SetupPageElements
+from absolute.elements_bak.main_page_elements import MainPageElements
+from absolute.elements_bak.setup_page_elements import SetupPageElements
 
 
 @pytest.allure.severity(pytest.allure.severity_level.MINOR)
