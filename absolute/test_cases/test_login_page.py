@@ -20,6 +20,7 @@ def test_verify_elements(fixture_webdriver):
     general_action.check_element_on_page(lp_element.sign_button())
     sleep(3)
 
+
 @pytest.allure.severity(pytest.allure.severity_level.NORMAL)
 @allure.feature('Check login page features')
 @allure.story('Login on cc')
