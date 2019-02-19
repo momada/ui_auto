@@ -17,3 +17,6 @@ def fixture_webdriver() -> webdriver:
 @pytest.fixture()
 def setup(fixture_webdriver):
     LoginActions(fixture_webdriver).login(Param.user_email(), Param.user_password())
+
+
+
