@@ -16,6 +16,9 @@ class GeneralActions(BasePage):
     def check_atribute_of_element(self, element, attribute):
         assert 'width: 100%; background-position: 100% 0px;' in (element.get_attribute(attribute))
 
+    def check_text_of_element(self, element, txt):
+        assert (element.text, txt)
+
     def check_active_button_in_sidebar(self, value):
         assert value in MainPageElements(self.driver).sidebar().get_attribute('style')
 
