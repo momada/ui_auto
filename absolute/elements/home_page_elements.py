@@ -3,10 +3,19 @@ class HomePageElements:
         self.driver = drive
 
     def device_btn(self):
-        return self.driver.find_element_by_xpath('//li[@data-automation-id="nav-list-item-10"]')
+        return self.driver.find_element_by_xpath('//li[@id="nav-list-item-10"]')
 
-    def activedevice_title(self):
-        return self.driver.find_element_by_xpath('//h1[@class="list-title list-header-name__title list-header-title"]')
+    def device_mgn_btn(self):
+        return self.driver.find_element_by_xpath('//li[@id="nav-list-item-20"]')
 
-    def default_filter(self):
-        return self.driver.find_element_by_xpath('//span[@class="is-op "]')
+    def device_protection_btn(self):
+        return self.driver.find_element_by_xpath('//li[@id="nav-list-item-30"]')
+
+    def device_policy_btn(self):
+        return self.driver.find_element_by_xpath('//li[@id="nav-list-item-40"]')
+
+    def device_app_btn(self):
+        return self.driver.find_element_by_xpath('//li[@id="nav-list-item-50"]')
+
+    def device_admin_btn(self):
+        return self.driver.find_element_by_xpath('//li[@id="nav-list-item-70"]')
