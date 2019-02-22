@@ -3,7 +3,7 @@ class ReportPageElements:
         self.driver = drive
 
     def rpt_search_box(self):
-        return self.driver.find_element_by_xpath('//input[@class="c0277 c0261 list-filter is-valid form-control"]')
+        return self.driver.find_element_by_xpath('//input[@class="c0278 c0262 list-filter is-valid form-control"]')
 
     def activedevice_title(self):
         return self.driver.find_element_by_xpath('//h1[@class="list-title list-header-name__title list-header-title"]')
