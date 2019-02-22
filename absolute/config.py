@@ -1,9 +1,9 @@
 class Param:
     def url():
-        return 'http://dv2archcc.absolute.com/'
+        return 'http://cc.absolute.com/'
 
     def user_email():
-        return "uiteam@absolute.com"
+        return "4757@absolute.com"
 
     def user_password():
         return "password"
