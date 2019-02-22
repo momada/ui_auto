@@ -1,4 +1,4 @@
-# sp_learning
+# pytest allure learning
 
 ## Command to run all test-cases in folder
 
@@ -26,3 +26,4 @@ allure generate --clean -o report-html report
 ```
 allure open report-html
 ```
+https://docs.qameta.io/allure/#_pytest
