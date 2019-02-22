@@ -26,6 +26,9 @@ def test_active_report(setup, fixture_webdriver):
     sleep(3)
 
 
+@pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
+@allure.feature('Verify event store report')
+@allure.story('Verify event store report')
 def test_eventstore_report(setup, fixture_webdriver):
     page = GeneralActions(fixture_webdriver)
     home = HomePageElements(fixture_webdriver)
@@ -35,13 +38,15 @@ def test_eventstore_report(setup, fixture_webdriver):
     page.check_text_of_element(report.activedevice_title(), 'Active Devices')
     # Nav to event store report
     page.click_on_button(report.eventstore_btn())
-    aa = report.eventstore_title().text
     page.check_text_of_element(report.eventstore_title(), '''Event Store
 History of events supported by all Absolute services.
 Report Options''')
     sleep(3)
 
 
+@pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
+@allure.feature('Verify nav menu')
+@allure.story('Verify nav menu')
 def test_navigation_menu(setup, fixture_webdriver):
     page = GeneralActions(fixture_webdriver)
     home = HomePageElements(fixture_webdriver)
