@@ -1,4 +1,4 @@
-# pytest allure learning
+# Pytest + Allure 
 
 ## Command to run all test-cases in folder
 
