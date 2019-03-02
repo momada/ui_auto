@@ -2,7 +2,7 @@
 import allure
 import pytest
 from time import sleep
-from absolute.config import Param
+from simple_settings import settings
 from absolute.actions.general_actions import GeneralActions
 from absolute.actions.login_actions import LoginActions
 from absolute.elements.login_page_elements import LoginPageElements
@@ -14,7 +14,8 @@ from absolute.elements.login_page_elements import LoginPageElements
 def test_login_page(fixture_webdriver):
     general_action = GeneralActions(fixture_webdriver)
     lp_element = LoginPageElements(fixture_webdriver)
-    general_action.open_page_by_url(Param.url())
+    print (settings.url)
+    general_action.open_page_by_url(settings.url)
     # check login elements
     general_action.check_element_on_page(lp_element.email_input())
     general_action.check_element_on_page(lp_element.sign_button())
@@ -25,6 +26,6 @@ def test_login_page(fixture_webdriver):
 @allure.feature('Check login page features')
 @allure.story('Login on cc')
 def test_login(fixture_webdriver):
-    LoginActions(fixture_webdriver).login(Param.user_email(), Param.user_password())
+    LoginActions(fixture_webdriver).login(settings.user, settings.password)
     LoginActions(fixture_webdriver).logout()
     sleep(5)

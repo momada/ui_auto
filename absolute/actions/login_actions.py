@@ -2,7 +2,7 @@ import time
 
 from absolute.actions.general_actions import GeneralActions
 from absolute.elements.login_page_elements import LoginPageElements
-from absolute.config import Param
+from simple_settings import settings
 
 
 class LoginActions:
@@ -12,7 +12,7 @@ class LoginActions:
     def login(self, email, password):
         login_elements = LoginPageElements(self.driver)
         general_action = GeneralActions(self.driver)
-        general_action.open_page_by_url(Param.url())
+        general_action.open_page_by_url(settings.url)
         login_elements.email_input().send_keys(email)
         login_elements.sign_button().click()
         assert (login_elements.email_label(), email)

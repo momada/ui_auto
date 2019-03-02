@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 from absolute.actions.login_actions import LoginActions
-from absolute.config import Param
+from simple_settings import settings
 
 
 @pytest.fixture
@@ -16,7 +16,4 @@ def fixture_webdriver() -> webdriver:
 
 @pytest.fixture()
 def setup(fixture_webdriver):
-    LoginActions(fixture_webdriver).login(Param.user_email(), Param.user_password())
-
-
-
+    LoginActions(fixture_webdriver).login(settings.user, settings.password)
