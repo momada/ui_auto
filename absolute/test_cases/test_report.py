@@ -8,8 +8,8 @@ from absolute.elements.report_page_elements import ReportPageElements
 
 
 @pytest.allure.severity(pytest.allure.severity_level.MINOR)
-@allure.feature('Verify active report')
-@allure.story('Verify active report')
+@pytest.allure.feature('Verify active report')
+@pytest.allure.story('Verify active report')
 def test_active_report(setup, fixture_webdriver):
     page = GeneralActions(fixture_webdriver)
     home = HomePageElements(fixture_webdriver)
@@ -27,8 +27,8 @@ def test_active_report(setup, fixture_webdriver):
 
 
 @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
-@allure.feature('Verify event store report')
-@allure.story('Verify event store report')
+@pytest.allure.feature('Verify event store report')
+@pytest.allure.story('Verify event store report')
 def test_eventstore_report(setup, fixture_webdriver):
     page = GeneralActions(fixture_webdriver)
     home = HomePageElements(fixture_webdriver)
